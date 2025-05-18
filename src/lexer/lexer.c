@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lexer.h                                            :+:      :+:    :+:   */
+/*   lexer.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didimitr <didimitr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/17 02:00:10 by didimitr          #+#    #+#             */
-/*   Updated: 2025/05/17 02:01:39 by didimitr         ###   ########.fr       */
+/*   Created: 2025/05/16 23:09:13 by didimitr          #+#    #+#             */
+/*   Updated: 2025/05/18 17:53:02 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LEXER_H
-# define LEXER_H
-
-#include ".\libft\libft.h"
+#include "minishell.h"
 
 
+// char **tokenizer(const char *input)
+// {
+//     char **tokens;
+    
 
-
-
-
-#endif
+    
+// }
