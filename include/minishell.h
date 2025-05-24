@@ -6,7 +6,7 @@
 /*   By: didimitr <didimitr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 17:46:34 by didimitr          #+#    #+#             */
-/*   Updated: 2025/05/18 18:12:58 by didimitr         ###   ########.fr       */
+/*   Updated: 2025/05/18 22:23:04 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 #include "libft.h"
 #include "lexer.h"
-#include "ft_printf.h"
-
+#include "stdio.h"
 
 
 
