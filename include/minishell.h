@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: didimitr <didimitr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 17:46:34 by didimitr          #+#    #+#             */
-/*   Updated: 2025/05/18 22:23:04 by didimitr         ###   ########.fr       */
+/*   Updated: 2025/05/24 14:10:05 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "libft.h"
 #include "lexer.h"
 #include "stdio.h"
+#include "parser.h"
 
 
 

@@ -1,12 +1,13 @@
 NAME    = minishell
 CC      = gcc
-CFLAGS  = -Wall -Wextra -Werror -g -Isrc/lexer -Ilibft -Iinclude
+CFLAGS  = -Wall -Wextra -Werror -g -Isrc/lexer -Ilibft -Iinclude -Isrc/parser
 SRC_DIR = src
 OBJ_DIR = obj
 
 SRCS = \
 	$(SRC_DIR)/lexer/lexer.c \
-	$(SRC_DIR)/main.c 
+	$(SRC_DIR)/main.c \
+	$(SRC_DIR)/parser/parser.c
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 
 LIBFT_DIR   = libft

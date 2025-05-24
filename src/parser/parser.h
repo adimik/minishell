@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parser.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/18 17:44:03 by didimitr          #+#    #+#             */
-/*   Updated: 2025/05/24 12:28:13 by didimitr         ###   ########.fr       */
+/*   Created: 2025/05/24 12:51:35 by didimitr          #+#    #+#             */
+/*   Updated: 2025/05/24 16:32:51 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PARSER_H
+# define PARSER_H
+
 #include "minishell.h"
 
-int main(void)
+typedef enum e_token_type 
 {
+    TOKEN_WORD
+}t_token_type;
 
 
-    return(0);
-}
+typedef struct s_token
+{
+    t_token_type    type;
+    char    *value;
+    t_token *next;
+}   t_token;
+
+#endif
