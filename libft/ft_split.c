@@ -6,13 +6,13 @@
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:36:32 by adimik            #+#    #+#             */
-/*   Updated: 2024/11/04 15:09:55 by didimitr         ###   ########.fr       */
+/*   Updated: 2025/06/17 18:00:26 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
-#include "libft.h"
 
 static int	count_words(const char *str, char c)
 {
@@ -34,6 +34,7 @@ static int	count_words(const char *str, char c)
 	}
 	return (i);
 }
+
 static char	*word_dup(const char *str, int start, int finish)
 {
 	char	*word;
@@ -49,23 +50,22 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	int	index;
-	char **split;
+	int		index;
+	char	**split;
 
 	split = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!split || !s)
-		return(NULL);
+		return (NULL);
 	i = 0;
 	j = 0;
 	index = -1;
-	while(i <= ft_strlen(s))
+	while (i <= ft_strlen(s))
 	{
-		if(s[i] != c && index < 0)
+		if (s[i] != c && index < 0)
 			index = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
@@ -75,5 +75,5 @@ char **ft_split(char const *s, char c)
 		i++;
 	}
 	split[j] = 0;
-	return(split);
+	return (split);
 }

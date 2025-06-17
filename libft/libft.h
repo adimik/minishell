@@ -6,26 +6,26 @@
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 02:18:02 by adimik            #+#    #+#             */
-/*   Updated: 2024/11/04 15:38:23 by didimitr         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:46:16 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
 # include <stddef.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
-# include <limits.h>
 
 int		ft_isprint(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
-size_t		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t num_elements, size_t size_of_element);
@@ -43,19 +43,16 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-char *ft_substr(char const *s, unsigned int start,
-size_t len);
-char *ft_strjoin(char const *s1, char const *s2);
-char *ft_strtrim(char const *s1, char const *set);
-char **ft_split(char const *s, char c);
-char *ft_itoa(int n);
-char *ft_strmapi(char const *s, char (*f)(unsigned
-int, char));
-void ft_striteri(char *s, void (*f)(unsigned int,
-char*));
-void ft_putchar_fd(char c, int fd);
-void ft_putstr_fd(char *s, int fd);
-void ft_putendl_fd(char *s, int fd);
-void ft_putnbr_fd(int n, int fd);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

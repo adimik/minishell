@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   lexer_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/18 17:44:03 by didimitr          #+#    #+#             */
-/*   Updated: 2025/06/17 17:44:36 by didimitr         ###   ########.fr       */
+/*   Created: 2025/06/17 18:02:46 by didimitr          #+#    #+#             */
+/*   Updated: 2025/06/17 18:08:14 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int	g_exit_status = 0;
-
-int	main(void)
+void	add_token_to_list(t_token **head, t_token *new)
 {
-	t_token	*list;
-	char	*prompt;
 	t_token	*tmp;
 
-	while (1)
+	tmp = *head;
+	if (!*head)
+		*head = new;
+	else
 	{
-		prompt = readline("minishell$ ");
-		list = tokenizer(prompt);
-		tmp = list;
-		while (tmp)
-		{
-			printf("token:%s\n", tmp->value);
+		while (tmp->next)
 			tmp = tmp->next;
-		}
-		free_ll(list);
-		free(prompt);
+		tmp->next = new;
 	}
-	return (g_exit_status);
+}
+
+void	free_ll(t_token *list)
+{
+	t_token	*tmp;
+
+	while (list)
+	{
+		tmp = list->next;
+		free(list->value);
+		free(list);
+		list = tmp;
+	}
 }

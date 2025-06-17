@@ -5,7 +5,7 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 SRCS = \
-	$(SRC_DIR)/lexer/lexer.c \
+	$(SRC_DIR)/lexer/lexer.c $(SRC_DIR)/lexer/lexer_utils.c $(SRC_DIR)/lexer/lexer_utils2.c \
 	$(SRC_DIR)/main.c \
 	$(SRC_DIR)/parser/parser.c
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))

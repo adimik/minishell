@@ -6,10 +6,8 @@
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 12:51:24 by didimitr          #+#    #+#             */
-/*   Updated: 2025/06/14 12:07:37 by didimitr         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:44:26 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h" 
-
-
+#include "minishell.h"

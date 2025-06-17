@@ -6,51 +6,50 @@
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:14:19 by didimitr          #+#    #+#             */
-/*   Updated: 2024/11/04 13:20:31 by didimitr         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:51:20 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static size_t get_size(int n)
+static size_t	get_size(int n)
 {
-	size_t size;
+	size_t	size;
 
-	if(n > 0)
+	if (n > 0)
 		size = 0;
-	else 
+	else
 		size = 1;
-	while(n)
+	while (n)
 	{
 		n /= 10;
 		size++;
 	}
-	return(size);
+	return (size);
 }
 
-
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*s;
 	long	num;
 	size_t	size;
 
-	num = (long) n;
+	num = (long)n;
 	size = get_size(n);
 	if (n < 0)
 		num *= -1;
 	s = (char *)malloc(size + 1);
 	if (!s)
-		return(NULL);
+		return (NULL);
 	s[size--] = '\0';
-	while(num > 0)
+	while (num > 0)
 	{
 		s[size--] = num % 10 + '0';
 		num = num / 10;
 	}
-	if(size == 0 && s[1] == '\0')
+	if (size == 0 && s[1] == '\0')
 		s[0] = '0';
-	else if(size == 0 && s[1])
+	else if (size == 0 && s[1])
 		s[size] = '-';
-	return(s);
+	return (s);
 }

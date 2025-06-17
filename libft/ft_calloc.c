@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adimik <adimik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 11:59:45 by adimik            #+#    #+#             */
-/*   Updated: 2024/10/27 11:59:45 by adimik           ###   ########.fr       */
+/*   Created: 2025/06/17 17:49:51 by didimitr          #+#    #+#             */
+/*   Updated: 2025/06/17 17:49:51 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	*ft_calloc(size_t num_elements, size_t size_of_element)
 {
-	unsigned char *arr;
-	size_t i;
+	unsigned char	*arr;
+	size_t			i;
 
 	if (num_elements != 0 && size_of_element > sizeof(size_t) / num_elements)
 		return (NULL);

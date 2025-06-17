@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 20:05:23 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 20:05:23 by marvin           ###   ########.fr       */
+/*   Created: 2025/06/17 17:54:07 by didimitr          #+#    #+#             */
+/*   Updated: 2025/06/17 17:54:07 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+#include <stddef.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	if (needle[0] == '\0')
-        return (char *)(&haystack[0]);
+		return ((char *)(&haystack[0]));
 	while (i < len && haystack[i] != '\0')
 	{
 		if (needle[0] == haystack[i])

@@ -6,14 +6,13 @@
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 12:51:35 by didimitr          #+#    #+#             */
-/*   Updated: 2025/06/14 12:07:43 by didimitr         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:44:15 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSER_H
 # define PARSER_H
 
-#include "minishell.h"
-
+# include "minishell.h"
 
 #endif
